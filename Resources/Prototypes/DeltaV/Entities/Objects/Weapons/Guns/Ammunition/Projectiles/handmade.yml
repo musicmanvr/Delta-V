@@ -1,0 +1,10 @@
+- type: entity
+  id: BulletHandmadeSMG
+  name: bullet (.35 handmade)
+  parent: BaseBullet
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 12 # Handmade bullets are shittier, but bullets nonetheless

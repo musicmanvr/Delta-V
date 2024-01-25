@@ -1,0 +1,27 @@
+- type: entity
+  id: BaseCartridgeHandmade
+  name: cartridge (handmade)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeHandmade
+      - CartridgePistol
+  - type: CartridgeAmmo
+    proto: BulletHandmadeSMG
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 1
+
+- type: entity
+  id: CartridgeHandmadeSMG
+  name: cartridge (.35 auto improvised)
+  parent: BaseCartridgeHandmade

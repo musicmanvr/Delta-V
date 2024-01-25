@@ -1,0 +1,41 @@
+- type: entity
+  id: BaseMagazineImprovised
+  name: Improvised Magazine (.35 auto)
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - MagazineImprovised
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeHandmade
+    capacity: 16
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: DeltaV/Objects/Weapons/Guns/Ammunition/Magazine/Improvised/improvised_smg.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazineImprovisedSMG
+  name: SMG Magazine (Improvised)
+  description: A magazine made out of parts you found lying around the station, holds .35 auto.
+  parent: BaseMagazineImprovised
+  components:
+  - type: BallisticAmmoProvider
+    proto: CartridgeHandmadeSMG
